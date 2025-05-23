@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# LinkUp - Social Networking Platform (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+LinkUp is a modern social networking platform designed to connect people through shared interests, events, and communities. This repository contains the frontend implementation of LinkUp, built with React.js and a comprehensive suite of supporting libraries to deliver a responsive, interactive user experience.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- **User Authentication**: Secure login/signup with JWT token management
+- **Profile Management**: Customizable user profiles with avatar uploads
+- **Social Interactions**: Post creation, liking, commenting, and sharing
+- **Event Management**: Create, join, and discover local events
+- **Real-time Updates**: WebSocket integration for live notifications
+- **Responsive Design**: Fully mobile-responsive UI with adaptive layouts
+- **Dark/Light Mode**: User-selectable theme preferences
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Core Framework
+- React 18 (Functional Components with Hooks)
+- React Router v6 for navigation
 
-### `npm test`
+### State Management
+- Redux Toolkit with RTK Query
+- React Context API for theme management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### UI Components
+- Material-UI (MUI) v5 with custom theme
+- Styled Components for CSS-in-JS
+- React Icons library
 
-### `npm run build`
+### API Interaction
+- Axios for HTTP requests
+- WebSocket for real-time features
+- Formik with Yup for form handling and validation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Build & Deployment
+- Vite build tool
+- ESLint + Prettier for code quality
+- GitHub Actions for CI/CD
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
+```bash
+src/
+├── assets/ # Static assets (images, fonts)
+├── components/ # Reusable UI components
+│ ├── common/ # Generic components (buttons, modals)
+│ ├── layout/ # Layout components (header, footer)
+│ └── features/ # Feature-specific components
+├── config/ # App configuration
+├── hooks/ # Custom React hooks
+├── pages/ # Route-level components
+├── redux/ # Redux store, slices, and queries
+├── services/ # API service layer
+├── styles/ # Global styles and theme
+├── utils/ # Utility functions and helpers
+└── App.jsx # Main application component
+```
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+    ```bash
+      git clone https://github.com/emmanuelronoh/Linkup-frontend.git
+      cd Linkup-frontend
+    ```
+2. Install dependencies:
 
-### `npm run eject`
+    ```bash
+      npm install
+    ```
+3. Create a .env file based on .env.example and populate with your environment variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+      npm run dev
+    ```
+## Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application requires the following environment variables:
+```bash
+VITE_API_BASE_URL=your_backend_api_url
+VITE_WS_URL=your_websocket_url
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_key
+VITE_DEFAULT_AVATAR_URL=default_avatar_image_url
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Available Scripts**:
+  ```bash
+    npm run dev: Starts development server
 
-## Learn More
+    npm run build: Creates production build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm run lint: Runs ESLint
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    npm run format: Formats code with Prettier
 
-### Code Splitting
+    pm run preview: Previews production build locally
+  ```
+## Contributing
+**We welcome contributions! Please follow these steps:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork the repository
 
-### Analyzing the Bundle Size
+2. Create a feature branch (git checkout -b feature/your-feature)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Commit your changes (git commit -m 'Add some feature')
 
-### Making a Progressive Web App
+4. Push to the branch (git push origin feature/your-feature)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Open a Pull Request
 
-### Advanced Configuration
+## Backend Integration
+**This frontend is designed to work with the LinkUp Backend API. Ensure you have the backend service running and properly configured before starting the frontend application.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
+**This project is licensed under the MIT License - see the LICENSE file for details.**
 
-### Deployment
+## Contact
+For questions or support, please contact:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Emmanuel Kipkirui - eronoh036@gmail.com
 
-### `npm run build` fails to minify
+Project Link: https://github.com/emmanuelronoh/Linkup-frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
